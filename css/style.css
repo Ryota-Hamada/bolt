@@ -30,9 +30,6 @@
   position: fixed;
   top: 0;
   z-index: 1;
-}
-
-.header-inner {
   padding: 15px 0;
 }
 
@@ -42,6 +39,7 @@
   color: #fff;
   transition: all 0.3s;
   text-decoration: none;
+  display: inline-block;
 }
 
 .header .contact {
@@ -62,7 +60,7 @@
 
 
 /* main */
-.theme-wrapper {
+.theme {
   padding: 250px 0;
 }
 
@@ -83,15 +81,13 @@
   padding-top: 50px;
 }
 
-.what-we-can-do .inner {
-  display:flex;
-  justify-content: space-around;
-}
+
 
 .text-wrapper {
   width: 50%;
   color: #fff;
 }
+
 
 .text-wrapper .title {
   font-size: 24px;
@@ -104,7 +100,7 @@
 }
 
 /* WORK */
-.work-inner {
+.work {
   padding: 60px 0 70px 0;
 }
 
@@ -117,19 +113,7 @@
   font-size: 24px;
 } 
 
-.image-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 0;
-}
 
-.work-image {
-  display: block;
-  margin-right:100px;
-  transition: all 0.3s;
-  opacity: 0.7;
-}
 .work-image:hover {
   opacity: 1;
 }
@@ -138,20 +122,8 @@
   margin-right: 0;
 }
 
-.work-image:nth-child(n+4) {
-  margin-top: 80px;
-}
-
-.details {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 90px;
-}
 
 .details .text {
-  margin-right: 90px;
-  width: 50%;
   line-height: 20px;
   color: #4e4e4e;
 }
@@ -171,17 +143,10 @@
 
 .skills-inner .title {
   font-size: 24px;
+  margin-bottom: 30px;
 }
 
-.skills-wrapper {
-  display: flex;
-  margin-top: 30px;
-  justify-content: center;
-}
 
-.each-skill {
-  margin-right: 180px;
-}
 
 .each-skill .text {
   margin-top: 20px;
@@ -229,3 +194,152 @@
   font-size: 12px;
 }
 /* footer */
+
+@media screen and (min-width:1200px) {
+  /*pc用のcssを記述*/
+  .what-we-can-do .inner {
+    display:flex;
+    justify-content: space-around;
+  }
+
+  .image-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0;
+  }  
+
+  .work-image:nth-child(n+4) {
+    margin-top: 80px;
+  }
+
+  .details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 90px;
+  }  
+
+  .details .text {
+    margin-right: 90px;
+    width: 50%;
+  }
+
+  .skills-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .each-skill {
+    margin-right: 180px;
+  }
+
+
+  
+  
+}
+
+@media only screen and (max-width:1199px) {
+  /*tablet用のcssを記述*/
+  .inner {
+    width: 97%;
+  }
+
+  .wrapper {
+    text-align: center;
+  }
+
+  .what-we-can-do {
+    padding: 50px 0 25px 0;
+  }
+
+  .text-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .text-wrapper .title {
+    margin: 20px 0 35px 0 ;
+  }
+  
+  .work {
+    padding: 60px 0 70px 0;
+  }
+
+  .image-wrapper {
+    /* justify-content: center; */
+    font-size: 0;
+  }
+
+  .work-image {
+    display: block;
+    transition: all 0.3s;
+    opacity: 0.7;
+  }
+
+  .work-image:nth-child(3n) {
+    margin-bottom: 80px;
+  }
+
+  .details .text {
+    margin-bottom: 40px;
+  }
+
+  .each-skill {
+    margin-bottom: 88px;
+  }
+
+  .each-skill:last-child {
+    margin-bottom: 0;
+  }
+
+  
+  
+
+}
+
+@media screen and (max-width:767px) {
+  /*スマホ用のcssを記述*/
+  .header-inner .contact {
+    display: none;
+  }
+
+  .humberger {
+    float: right;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+
+  .humberger .bar {
+    height: 2px;
+    width: 20px;
+    background-color: #ddd;
+    border-radius: 2px;
+    display: block;
+  }
+
+  .humberger .midlle {
+    margin: 5px 0;
+  }
+
+  .theme {
+    padding: 160px 0 130px 0;
+  }
+
+  .main-theme {
+    font-size: 80px;
+  }
+
+  .sns {
+    padding: 50px 0;
+  }
+  .sns-inner {
+    display: inline;
+  }
+
+}
+     
+
+    
+  
