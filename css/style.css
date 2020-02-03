@@ -84,7 +84,7 @@
 }
 
 .what-we-can-do .inner {
-  display:flex;
+  display:　flex;
   justify-content: space-around;
 }
 
@@ -103,9 +103,8 @@
   line-height: 30px;
 }
 
-                             /* WORK */
 .work {
-  padding: 60px 0 70px ;
+  padding: 60px 0 70px;
 }
 
 .work-inner .title {
@@ -162,7 +161,7 @@
 
 .skills {
   background-color: #4e4e4e;
-  padding: 70px 0 100px ;
+  padding: 70px 0 100px;
 }
 
 .skills-wrapper {
@@ -220,7 +219,7 @@
 /* footer */
 .footer {
   background-color: #74cfae;
-  padding: 20px 0 25px ;
+  padding: 20px 0 25px;
 }
 
 .footer-inner .text{
@@ -246,7 +245,7 @@
   }
 
   .what-we-can-do .inner {
-    display:inline;
+    display:　inline;
   }
 
   .text-wrapper {
@@ -255,7 +254,7 @@
   }
 
   .text-wrapper .title {
-    margin-bottom:35px ;
+    margin-bottom: 35px;
   }
   
   .work {
@@ -290,8 +289,8 @@
   }  
 
   .details .text {
-    margin:0 auto 40px;
-    width: 100%
+    margin: 0 auto 40px;
+    width: 100%;
   }
 
   .skills-wrapper {
@@ -299,11 +298,11 @@
   }
 
   .each-skill {
-    margin:0 auto 88px;
+    margin: 0 auto 88px;
   }
 
   .each-skill:last-child {
-    margin:0 auto 0;
+    margin: 0 auto 0;
   }
 }
 
@@ -320,15 +319,11 @@
     padding: 10px;
     width: 20px;
     height: 20px;
-    display: inline-block;
+    display: block;
     position: relative;
   }
 
-  .humberger .bar {
-    height: 2px;
-    width: 20px;
-    background-color: #ddd;
-  }
+
   .humberger .bar,
   .humberger .bar::before,
   .humberger .bar::after {
@@ -343,7 +338,7 @@
   }
 
   .bar::before {
-    bottom: -9px
+    bottom: -9px;
   }
 
   .bar::after {
