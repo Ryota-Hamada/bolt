@@ -21,8 +21,6 @@
   font-family: Raleway;
 }
 
-
-
 /* header */
 .header {
   width: 100%;
@@ -51,7 +49,7 @@
   color: #333;
 }
 
-.fa-bolt {
+.bolt-icon {
   float: left;
   color: #4e4e4e;
 }
@@ -60,6 +58,10 @@
 
 
 /* main */
+.main {
+  padding-top: 78px;
+}
+
 .theme {
   padding: 250px 0;
 }
@@ -81,13 +83,15 @@
   padding-top: 50px;
 }
 
-
+.what-we-can-do .inner {
+  display:flex;
+  justify-content: space-around;
+}
 
 .text-wrapper {
   width: 50%;
   color: #fff;
 }
-
 
 .text-wrapper .title {
   font-size: 24px;
@@ -99,9 +103,9 @@
   line-height: 30px;
 }
 
-/* WORK */
+                             /* WORK */
 .work {
-  padding: 60px 0 70px 0;
+  padding: 60px 0 70px ;
 }
 
 .work-inner .title {
@@ -113,6 +117,18 @@
   font-size: 24px;
 } 
 
+.work-image {
+  margin-right: 100px;
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0;
+}  
 
 .work-image:hover {
   opacity: 1;
@@ -122,8 +138,20 @@
   margin-right: 0;
 }
 
+.work-image:nth-child(n+4) {
+  margin-top: 80px;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 90px;
+}  
 
 .details .text {
+  margin-right: 90px;
+  width: 50%;
   line-height: 20px;
   color: #4e4e4e;
 }
@@ -134,7 +162,12 @@
 
 .skills {
   background-color: #4e4e4e;
-  padding: 70px 0 100px 0;
+  padding: 70px 0 100px ;
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .skills-inner {
@@ -146,7 +179,9 @@
   margin-bottom: 30px;
 }
 
-
+.each-skill {
+  margin-right: 180px;
+}
 
 .each-skill .text {
   margin-top: 20px;
@@ -185,61 +220,18 @@
 /* footer */
 .footer {
   background-color: #74cfae;
-  padding: 20px 0 25px 0;
+  padding: 20px 0 25px ;
 }
 
-.footer-inner p{
+.footer-inner .text{
   color: #fff;
-  float: right;
+  text-align: right;
   font-size: 12px;
 }
 /* footer */
 
-@media screen and (min-width:1200px) {
-  /*pc用のcssを記述*/
-  .what-we-can-do .inner {
-    display:flex;
-    justify-content: space-around;
-  }
 
-  .image-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 0;
-  }  
-
-  .work-image:nth-child(n+4) {
-    margin-top: 80px;
-  }
-
-  .details {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 90px;
-  }  
-
-  .details .text {
-    margin-right: 90px;
-    width: 50%;
-  }
-
-  .skills-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  .each-skill {
-    margin-right: 180px;
-  }
-
-
-  
-  
-}
-
-@media only screen and (max-width:1199px) {
+@media screen and (max-width:1199px) {
   /*tablet用のcssを記述*/
   .inner {
     width: 97%;
@@ -250,52 +242,69 @@
   }
 
   .what-we-can-do {
-    padding: 50px 0 25px 0;
+    padding: 50px 0 25px ;
+  }
+
+  .what-we-can-do .inner {
+    display:inline;
   }
 
   .text-wrapper {
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
 
   .text-wrapper .title {
-    margin: 20px 0 35px 0 ;
+    margin-bottom:35px ;
   }
   
   .work {
-    padding: 60px 0 70px 0;
+    padding: 60px 0 70px ;
   }
 
   .image-wrapper {
-    /* justify-content: center; */
-    font-size: 0;
+    display: inline-block;
+    margin-bottom: 80px;
   }
 
   .work-image {
-    display: block;
-    transition: all 0.3s;
-    opacity: 0.7;
+    margin-right: 0;
+
   }
 
   .work-image:nth-child(3n) {
     margin-bottom: 80px;
   }
 
-  .details .text {
-    margin-bottom: 40px;
+  .work-image:nth-child(n+4) {
+    margin-top: 0;
   }
 
-  .each-skill {
-    margin-bottom: 88px;
-  }
-
-  .each-skill:last-child {
+  .work-image:last-child {
     margin-bottom: 0;
   }
 
-  
-  
 
+  .details {
+    display: inline;
+  }  
+
+  .details .text {
+    margin:0 auto 40px;
+    width: 100%
+  }
+
+  .skills-wrapper {
+    flex-direction: column;
+  }
+
+  .each-skill {
+    margin:0 auto 88px;
+  }
+
+  .each-skill:last-child {
+    margin:0 auto 0;
+  }
 }
 
 @media screen and (max-width:767px) {
@@ -309,22 +318,40 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 10px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
   }
 
   .humberger .bar {
     height: 2px;
     width: 20px;
     background-color: #ddd;
-    border-radius: 2px;
+  }
+  .humberger .bar,
+  .humberger .bar::before,
+  .humberger .bar::after {
+    position: absolute;
+    content: "";
     display: block;
+    height: 2px;
+    background-color: #ddd;
+    width: 20px;
+    border-radius: 2px;
+    box-sizing: border-box;
   }
 
-  .humberger .midlle {
-    margin: 5px 0;
+  .bar::before {
+    bottom: -9px
+  }
+
+  .bar::after {
+    bottom: -18px;
   }
 
   .theme {
-    padding: 160px 0 130px 0;
+    padding: 160px 0 130px;
   }
 
   .main-theme {
@@ -332,10 +359,10 @@
   }
 
   .sns {
-    padding: 50px 0;
+    padding: 50px 15px;
   }
   .sns-inner {
-    display: inline;
+    flex-direction: column;
   }
 
 }
