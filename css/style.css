@@ -84,7 +84,7 @@
 }
 
 .what-we-can-do .inner {
-  display:　flex;
+  display: flex;
   justify-content: space-around;
 }
 
@@ -120,6 +120,10 @@
   margin-right: 100px;
   transition: all 0.3s;
   opacity: 0.7;
+}
+
+.btn {
+  display: block;
 }
 
 .image-wrapper {
@@ -245,7 +249,7 @@
   }
 
   .what-we-can-do .inner {
-    display:　inline;
+    display: block;
   }
 
   .text-wrapper {
@@ -255,10 +259,6 @@
 
   .text-wrapper .title {
     margin-bottom: 35px;
-  }
-  
-  .work {
-    padding: 60px 0 70px ;
   }
 
   .image-wrapper {
@@ -285,7 +285,7 @@
 
 
   .details {
-    display: inline;
+    display: block;
   }  
 
   .details .text {
@@ -361,7 +361,3 @@
   }
 
 }
-     
-
-    
-  
